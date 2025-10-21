@@ -21,3 +21,21 @@ if (class_exists(\Composer\Autoload\ClassLoader::class)) {
 
 echo "Timestamp: " . date('c') . "\n";
 
+// Sanity check: create a User from the project's domain model and print a short message.
+if (!class_exists(\App\Domain\User::class)) {
+	$fallback = __DIR__ . '/../src/Domain/User.php';
+	if (file_exists($fallback)) {
+		require_once $fallback;
+		echo "Included fallback file: $fallback\n";
+	} else {
+		echo "Fallback User file not found: $fallback\n";
+	}
+}
+
+try {
+	$user = new \App\Domain\User('u-1', 'Lino Sauvaire', 'sauvairelino@gmail.com');
+	echo "User created: {$user->id()} - {$user->name()} ({$user->email()})\n";
+} catch (\Throwable $e) {
+	echo "User creation failed: " . $e->getMessage() . "\n";
+}
+

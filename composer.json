@@ -2,7 +2,7 @@
     "name": "lino/lino",
     "autoload": {
         "psr-4": {
-            "Lino\\Lino\\": "src/"
+            "Lino\\App\\": "src/"
         }
     },
     "authors": [
