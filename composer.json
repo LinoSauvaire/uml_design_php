@@ -11,5 +11,7 @@
             "email": "sauvairelino@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    }
 }
