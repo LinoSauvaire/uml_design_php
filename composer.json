@@ -1,0 +1,15 @@
+{
+    "name": "lino/lino",
+    "autoload": {
+        "psr-4": {
+            "Lino\\Lino\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lino Sauvaire",
+            "email": "sauvairelino@gmail.com"
+        }
+    ],
+    "require": {}
+}
